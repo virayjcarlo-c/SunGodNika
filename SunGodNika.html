@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign-Up Form</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'> <!-- Boxicons -->
+</head>
+<body>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/jcarlo.viray?mibextid=ZbWKwL" target="_blank">
+            <i class='bx bxl-facebook'></i>
+        </a>
+        <a href="https://www.instagram.com/raizel0729?igsh=MWFoMnhxYmE0bWx4Zg==" target="_blank">
+            <i class='bx bxl-instagram'></i>
+        </a>
+    </div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-container">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bx-user'></i>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="Password" required id="password">
+                <label for="togglePassword" class="toggle-password-label">
+                    <i class='bx bx-show' id="togglePassword"></i>
+                </label>
+            </div>
+            <button type="submit">Login</button>
+            <p class="signup">Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+        </form>
+    </div>
+
+    <div class="signup-container" style="display: none;">
+        <button class="back-button" id="backToLogin">
+            <i class='bx bx-arrow-back'></i> <!-- Back arrow icon -->
+        </button>
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <div class="input-container">
+                <input type="email" placeholder="Email" required>
+                <i class='bx bx-envelope'></i>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="Password" required id="signupPassword">
+                <label for="toggleSignupPassword" class="toggle-password-label">
+                    <i class='bx bx-show' id="toggleSignupPassword"></i>
+                </label>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="Confirm Password" required id="confirmPassword">
+            </div>
+            <button type="submit">Create</button>
+        </form>
+    </div>
+
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.classList.toggle('bx-show');
+            this.classList.toggle('bx-hide'); // Optional: add a hide icon if available
+        });
+
+        const showSignupLink = document.getElementById('showSignup');
+        const signupContainer = document.querySelector('.signup-container');
+        const loginContainer = document.querySelector('.login-container');
+        const backToLogin = document.getElementById('backToLogin');
+
+        showSignupLink.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            signupContainer.style.display = 'block'; // Show the sign-up form
+            loginContainer.style.display = 'none'; // Hide the login form
+        });
+
+        backToLogin.addEventListener('click', function () {
+            signupContainer.style.display = 'none'; // Hide the sign-up form
+            loginContainer.style.display = 'block'; // Show the login form
+        });
+
+        // Toggle password visibility for signup
+        const toggleSignupPassword = document.getElementById('toggleSignupPassword');
+        toggleSignupPassword.addEventListener('click', function () {
+            const type = signupPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            signupPassword.setAttribute('type', type);
+            this.classList.toggle('bx-show');
+            this.classList.toggle('bx-hide'); // Optional: add a hide icon if available
+        });
+    </script>
+</body>
+</html>
