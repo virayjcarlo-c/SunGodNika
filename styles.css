@@ -2,80 +2,80 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Garamond', serif; 
-    background-image: url('hogwarts.jpg.webp'); /* Ensure the path is correct */
+    background-image: url(hogwarts.jpg.webp); 
     background-size: cover;
-    background-position: center; /* Center the background image */
-    position: relative; /* Ensure the body is positioned relative for absolute positioning */
+    background-position: center;
+    position: relative; 
 }
 
 .social-icons {
-    position: absolute; /* Positioning it absolutely within the body */
-    top: 40px; /* Distance from the top */
-    right: 40px; /* Distance from the right */
-    display: flex; /* Use flexbox for alignment */
+    position: absolute; 
+    top: 40px; 
+    right: 40px; 
+    display: flex; /
 }
 
 .social-icons a {
-    color: #FFD700; /* Gold color for the icons */
-    font-size: 40px; /* Adjust size as needed */
-    margin-left: 10px; /* Space between icons */
-    text-decoration: none; /* Remove underline */
+    color: #FFD700; 
+    font-size: 40px; 
+    margin-left: 10px; 
+    text-decoration: none; 
 }
 
 .social-icons a:hover {
-    color: #FFFFFF; /* Change color on hover */
+    color: #FFFFFF; 
 }
 
 .login-container, .signup-container {
-    position: fixed; /* Fix the position of the containers */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust the position to truly center */
-    background-color: rgba(0, 0, 0, 0.4); /* Darker semi-transparent background for better contrast */
-    padding: 40px; /* Increased padding for a more spacious look */
-    border-radius: 12px; /* Slightly larger border radius */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
-    width: 300px; /* Fixed width for the container */
+    position: fixed;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); 
+    width: 300px; /* Fixed width for the container 
     text-align: center;
 }
 
 h2 {
-    margin-bottom: 25px; /* More space below the title */
-    color: #FFD700; /* Gold color for a magical touch */
-    font-family: 'Harry Potter', cursive; /* Ensure you have this font available */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Stronger shadow for better visibility */
+    margin-bottom: 25px; 
+    color: #FFD700; 
+    font-family: 'Harry Potter', cursive; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
 
 .input-container {
     position: relative;
     margin: 10px 0;
-    width: 100%; /* Set input container width to 100% */
+    width: 100%; 
 }
 
 .input-container input[type="text"],
 .input-container input[type="password"],
 .input-container input[type="email"] {
-    width: 100%; /* Full width of the container */
-    padding: 12px 40px; /* Space for the icons */
-    border: 1px solid #FFD700; /* Gold border */
+    width: 100%;
+    padding: 12px 40px; 
+    border: 1px solid #FFD700; 
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.9); /* Light transparent background for inputs */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box; 
 }
 
 .input-container i {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #FFD700; /* Gold color for icons */
+    color: #FFD700;
 }
 
 .input-container i.bx-user {
-    right: 10px; /* Position for user icon */
+    right: 10px; 
 }
 
 .input-container i.bx-envelope {
-    right: 10px; /* Position for email icon */
+    right: 10px;
 }
 
 .toggle-password-label {
@@ -84,20 +84,20 @@ h2 {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: #FFD700; /* Gold color for the icon */
+    color: #FFD700; 
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus {
-    border-color: #DAA520; /* Golden border on focus */
+    border-color: #DAA520; 
     outline: none;
 }
 
 button {
-    width: 100%; /* Full width for the button */
+    width: 100%; 
     padding: 12px;
-    background-color: #8B0000; /* Dark red color */
+    background-color: #8B0000;
     color: white;
     border: none;
     border-radius: 4px;
@@ -107,32 +107,32 @@ button {
 }
 
 button:hover {
-    background-color: #A52A2A; /* Lighter red on hover */
+    background-color: #A52A2A; 
 }
 
 .signup {
     margin-top: 15px; 
-    color: aliceblue; /* Color for the text */
+    color: aliceblue; 
     font-size: 20px;
 }
 
 .signup a {
-    color: #FFD700; /* Gold color for the link */
-    text-decoration: none; /* Remove underline */
+    color: #FFD700; 
+    text-decoration: none;
 }
 
 .signup a:hover {
-    text-decoration: underline; /* Underline on hover */
-    color: #FFFFFF; /* Change link color on hover */
+    text-decoration: underline; 
+    color: #FFFFFF; 
 }
 
 .back-button {
     position: absolute;
     top: 10px;
     left: 10px;
-    background: none; /* No background */
-    border: none; /* No border */
-    color: #FFD700; /* Gold color for the icon */
+    background: none; 
+    border: none; 
+    color: #FFD700; 
     cursor: pointer;
-    font-size: 24px; /* Adjust font size */
+    font-size: 24px; 
 }
