@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Sign-Up Form</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'> <!-- Boxicons -->
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'> 
 </head>
 <body>
     <div class="social-icons">
@@ -37,7 +37,7 @@
 
     <div class="signup-container" style="display: none;">
         <button class="back-button" id="backToLogin">
-            <i class='bx bx-arrow-back'></i> <!-- Back arrow icon -->
+            <i class='bx bx-arrow-back'></i>
         </button>
         <h2>Sign Up</h2>
         <form id="signupForm">
@@ -66,7 +66,7 @@
             const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
             passwordInput.setAttribute('type', type);
             this.classList.toggle('bx-show');
-            this.classList.toggle('bx-hide'); // Optional: add a hide icon if available
+            this.classList.toggle('bx-hide');
         });
 
         const showSignupLink = document.getElementById('showSignup');
@@ -75,23 +75,23 @@
         const backToLogin = document.getElementById('backToLogin');
 
         showSignupLink.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent default anchor behavior
-            signupContainer.style.display = 'block'; // Show the sign-up form
-            loginContainer.style.display = 'none'; // Hide the login form
+            event.preventDefault(); 
+            signupContainer.style.display = 'block'; 
+            loginContainer.style.display = 'none'; 
         });
 
         backToLogin.addEventListener('click', function () {
-            signupContainer.style.display = 'none'; // Hide the sign-up form
-            loginContainer.style.display = 'block'; // Show the login form
+            signupContainer.style.display = 'none'; 
+            loginContainer.style.display = 'block'; 
         });
 
-        // Toggle password visibility for signup
+        
         const toggleSignupPassword = document.getElementById('toggleSignupPassword');
         toggleSignupPassword.addEventListener('click', function () {
             const type = signupPassword.getAttribute('type') === 'password' ? 'text' : 'password';
             signupPassword.setAttribute('type', type);
             this.classList.toggle('bx-show');
-            this.classList.toggle('bx-hide'); // Optional: add a hide icon if available
+            this.classList.toggle('bx-hide'); 
         });
     </script>
 </body>
